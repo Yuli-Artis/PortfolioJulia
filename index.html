@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="lightbox2-2.11.3/src/css/lightbox.css" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porfolio-Julia-León-González</title>
+        <style>
+        * {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        font-size: 20px;
+        }
+        body {
+        overflow-x: hidden;
+        }
+        .barra-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #29375C;
+        padding: 15px 0;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 2px 10px #515151;
+        }
+        .barra-menu a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: color 0.3s;
+        }
+        .barra-menu a:hover {
+        color: #B7C8DA;
+        }
+        header {
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-color: #B7C8DA;
+        background-image: url(./Imagenes//dosDdibujos/jmasj.png);
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        header h1 {
+        text-align: center;
+        margin: 5px 0;
+        padding: 0;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: normal;
+        text-shadow: 1px 1px 3px #000000;
+        }
+        .typing-clean {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: monospace;
+        font-size: clamp(1rem, 6vw, 2.5rem);
+        animation: typing 3s steps(30) forwards;
+        }
+        @keyframes typing {
+        from { max-width: 0; }
+        to   { max-width: 100%; }
+        }
+        .img2D {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+        }
+        .img2D a,
+        .img2D img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        }
+        .img2D a:hover img {
+        transform: scale(1.05);
+        }
+        .carrusel-personajes {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        height: 80vh;
+        min-height: 500px;
+        overflow: hidden;
+        margin-top: 60px;
+        }
+        .carrusel-contenedor {
+        width: 400%;
+        height: 100%;
+        display: flex;
+        transition: transform 1.2s ease-in-out;
+        animation: carrusel 20s infinite;
+        }
+        .slide {
+        width: 25%;
+        height: 100%;
+        position: relative;
+        }
+        .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        }
+        @keyframes carrusel {
+        0%,
+        20% {
+        transform: translateX(0);
+        }
+        25%,
+        45% {
+        transform: translateX(-25%);
+        }
+        50%,
+        70% {
+        transform: translateX(-50%);
+        }
+        75%,
+        95% {
+        transform: translateX(-75%);
+        }
+        100% {
+        transform: translateX(0);
+        }
+        }
+        .imganes3D>div:last-child {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+        }
+        .imganes3D>div:last-child a,
+        .imganes3D>div:last-child img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        }
+        .imganes3D>div:last-child a:hover img {
+        transform: scale(1.05);
+        }
+        .sobre-mi {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+        align-items: start;
+        background-color: #B7C8DA;
+        border-radius: 10px;
+        height: 450px;
+        }
+        .textoInformacion {
+        grid-column: 2;
+        grid-row: 1;
+        height: auto;
+        width: 800px;
+        font-size: large;
+        }
+        .logosEstrellitas {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        gap: 20px;
+        margin-top: 5px;
+        }
+        .logosEstrellitas img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        }
+        .logos-y-columnas {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        }
+        .logos-y-columnas {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        }
+        .logosEstrellitas img {
+        width: 60px;
+        }
+        
+        .imagenes {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        }
+        .imgReal img,
+        .imgAnime img {
+        width: 100%;
+        max-width: 480px;
+        height: 550px;
+        border-radius: 8px;
+        }
+        .contacto {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+        .contacto-contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        }
+        .contacto-izquierda {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        }
+        .RedesSociales h3 {
+        color: #29375C;
+        font-size: 1.4rem;
+        }
+        .redesEnlace p {
+        margin: 0;
+        color: #333;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        }
+        .qr-section h4 {
+        color: #29375C;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .qr {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+        }
+        .qr img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #29375C;
+        }
+        .qr-text {
+        font-style: italic;
+        color: #666;
+        font-size: 0.9rem;
+        }
+        .contacto-derecha {
+        display: flex;
+        flex-direction: column;
+        }
+        .message-section h3 {
+        color: #29375C;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        }
+        .contactoFormal {
+        display: flex;
+        flex-direction: column;
+        }
+        .contactoFormal p {
+        margin: 0;
+        color: #333;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        }
+        .contactoFormal p:last-child {
+        border-bottom: none;
+        }
+        .redesEnlace p:last-child {
+        border-bottom: none;
+        }
+        footer {
+        width: 100%;
+        background-color: #233156;
+        color: white;
+        padding: 40px 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 60px;
+        }
+        .formulario {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+        }
+        .formulario input,
+        .formulario textarea {
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #0A2846;
+        background-color: #5D7EB4;
+        color: white;
+        font-size: 14px;
+        outline: none;
+        }
+        .formulario input::placeholder,
+        .formulario textarea::placeholder {
+        color: #FFFFFF;
+        }
+        .formulario textarea {
+        height: 120px;
+        resize: none;
+        }
+        .textoimg {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-weight: bold;
+        max-width: 400px;
+        }
+        .textoimg p {
+        font-size: 17px;
+        line-height: 1.4;
+        }
+        .textoimg p:first-child {
+        font-size: 16px;
+        font-weight: bold;
+        }
+        .textoimg img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        scale: 2.5;
+        }
+        h1#tituloGaleria {
+        font-size: 55px;
+        text-align: center;
+        margin: 30px 0 20px 0;
+        color: #29375C;
+        }
+        h2#titulo3d1,
+        #titulo2d1 {
+        font-size: 45px;
+        text-align: center;
+        margin: 30px 0 20px 0;
+        color: #29375C;
+        }
+        h3 {
+        font-size: 35px;
+        color: #29375C;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+        #modeloPersonaje {
+        margin-top: 15px;
+        }
+        h2#sobremih2 {
+        font-size: 55px;
+        text-align: center;
+        margin: 30px 0 20px 0;
+        color: #29375C;
+        }
+        h2#contactoh2 {
+        font-size: 55px;
+        text-align: center;
+        margin: 30px 0 20px 0;
+        color: #29375C;
+        }
+        h3#sobremi1 {
+        font-size: 28px;
+        text-align: left;
+        margin: 30px 0 20px 0;
+        color: #29375C;
+        }
+        #appqueuso {
+        color: #29375C;
+        font-weight: bold;
+        }
+        #psobremi {
+        background-color: "#B7C8DA";
+        }
+        .formulariobien {
+        width: 50%;
+        }
+        @media screen and (min-width: 1200px) {
+        .img2D,
+        .imganes3D>div:last-child {
+        grid-template-columns: repeat(4, 1fr);
+        }
+        .sobre-mi {
+        grid-template-columns: 2fr 2fr;
+        height: auto;
+        padding: 40px;
+        }
+        .contacto-contenedor {
+        grid-template-columns: 1fr 1fr;
+        }
+        footer {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+        }
+        .formulariobien {
+        width: 50%;
+        }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        * {
+        font-size: 18px;
+        overflow-x: hidden;
+        }
+        .img2D,
+        .imganes3D>div:last-child {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+        }
+        .img2D a,
+        .img2D img,
+        .imganes3D>div:last-child a,
+        .imganes3D>div:last-child img {
+        height: 220px;
+        }
+        .sobre-mi {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        height: auto;
+        padding: 30px;
+        }
+        .textoInformacion {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        text-align: center;
+        }
+        .imagenes {
+        grid-column: 1;
+        grid-row: 1;
+        align-items: center;
+        }
+        .imgReal img,
+        .imgAnime img {
+        max-width: 100%;
+        height: 350px;
+        }
+        .carrusel-personajes {
+        height: 60vh;
+        min-height: 400px;
+        }
+        .contacto-contenedor {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        }
+        footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px 20px;
+        }
+        .formulariobien {
+        width: 80%;
+        }
+        .textoimg {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        }
+        .textoimg img {
+        width: 180px;
+        scale: 1;
+        margin-top: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        h1#tituloGaleria,
+        h2#sobremih2,
+        h2#contactoh2 {
+        font-size: 45px;
+        }
+        h2#titulo3d1,
+        #titulo2d1 {
+        font-size: 38px;
+        }
+        h3 {
+        font-size: 30px;
+        }
+        h3#sobremi1 {
+        font-size: 28px;
+        text-align: center;
+        margin: 30px 0 20px 0;
+        color: #29375C;
+        }
+        .logosEstrellitas {
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        }
+
+        @media screen and (max-width: 767px) {
+            * {
+        font-size: 16px;
+        overflow-x: hidden;
+        }
+        .barra-menu {
+        padding: 10px 0;
+        }
+        .barra-menu a {
+        margin: 0 10px;
+        font-size: 1rem;
+        }
+        header {
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-color: #B7C8DA;
+        background-image: url(./Imagenes//dosDdibujos/jmasj.png);
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        header h1 {
+        font-size: 1.8rem;
+        }
+        .img2D,
+        .imganes3D>div:last-child {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 15px;
+        }
+        .img2D a,
+        .img2D img,
+        .imganes3D>div:last-child a,
+        .imganes3D>div:last-child img {
+        height: 180px;
+        }
+        .sobre-mi {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        height: auto;
+        padding: 20px;
+        }
+        .textoInformacion {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+        }
+        .imagenes {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        }
+        .imgReal img,
+        .imgAnime img {
+        max-width: 100%;
+        height: 300px;
+        }
+        
+        .carrusel-personajes {
+        height: 40vh;
+        min-height: 300px;
+        margin-top: 40px;
+        }
+        .contacto {
+        padding: 20px;
+        }
+        .contacto-contenedor {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        }
+        .contacto-izquierda,
+        .contacto-derecha {
+        gap: 20px;
+        }
+        .qr {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        }
+        footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 15px;
+        overflow-y: hidden;
+        }
+        .formulariobien {
+        width: 75%;
+        }
+        .formulario {
+        width: 100%;
+        }
+        .textoimg {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        }
+        .textoimg img {
+        width: 150px;
+        scale: 1;
+        }
+        h1#tituloGaleria,
+        h2#sobremih2,
+        h2#contactoh2 {
+        font-size: 35px;
+        margin: 20px 0 15px 0;
+        }
+        h2#titulo3d1,
+        #titulo2d1 {
+        font-size: 30px;
+        margin: 20px 0 15px 0;
+        }
+        h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        }
+        h3#sobremi1 {
+        font-size: 22px;
+        text-align: center;
+        }
+        #psobremi {
+        text-align: center;
+        }
+        .logosEstrellitas {
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        #appqueuso {
+        color: #29375C;
+        text-align: center;
+        font-weight: bold;
+        }
+        .grafica {
+        width: 100%;
+        max-width: 350px;
+        display: block;
+        margin: 15px auto 0 auto;
+    }
+        }
+        
+        @media screen and (max-width: 480px) {
+ .img2D,
+        .imganes3D > div:last-child {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+        padding: 12px;
+        }
+        .img2D img,
+        .imganes3D > div:last-child img {
+        height: 160px;
+        }
+        .grafica {
+        width: 100%;
+        max-width: 280px;
+        display: block;
+        margin: 15px auto 0 auto;
+    }
+        }
+       
+
+        
+        </style>
+    </head>
+    <body>
+        <div class="barra-menu">
+            <a href="#">Inicio</a>
+            <a href="#">Galeria</a>
+            <a href="#">About</a>
+            <a href="#">Contacto</a>
+        </div>
+        <Header id="header">
+            <h1 class="typing-clean">Portfolio</h1>
+            <h1 class="typing-clean">Julia León González</h1>
+        </Header>
+        <div id="Galeria"> </div>
+        <h1 id="tituloGaleria">Galeria</h1>
+        <div class="imganes2D">
+            <h2 id="titulo2d1">Imagenes 2D</h2>
+            <div class="img2D">
+                <a href="./Imagenes/dosDdibujos/julia-Y-lidya.png" data-lightbox="galeria" data-title="juliaYLidya">
+                    <img src="./Imagenes/dosDdibujos/julia-Y-lidya.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/jinx.png" data-lightbox="galeria" data-title="jinx">
+                    <img src="./Imagenes/dosDdibujos/jinx.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/jinx2.png" data-lightbox="galeria" data-title="jinx2">
+                    <img src="./Imagenes/dosDdibujos/jinx2.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/bakugo.png" data-lightbox="galeria" data-title="bakugo">
+                    <img src="./Imagenes/dosDdibujos/bakugo.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/chicas.png" data-lightbox="galeria" data-title="chicas">
+                    <img src="./Imagenes/dosDdibujos/chicas.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/frieren.png" data-lightbox="galeria" data-title="frieren">
+                    <img src="./Imagenes/dosDdibujos/frieren.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/gohan.png" data-lightbox="galeria" data-title="gohan">
+                    <img src="./Imagenes/dosDdibujos/gohan.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/jesus-y-yo-pokemon.png" data-lightbox="galeria"
+                    data-title="jesusYyoPokemon">
+                    <img src="./Imagenes/dosDdibujos/jesus-y-yo-pokemon.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/shadow.png" data-lightbox="galeria" data-title="shadow">
+                    <img src="./Imagenes/dosDdibujos/shadow.png" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/videojuego.jpg" data-lightbox="galeria" data-title="videojuego">
+                    <img src="./Imagenes/dosDdibujos/videojuego.jpg" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/maomao.jpg" data-lightbox="galeria" data-title="maomao">
+                    <img src="./Imagenes/dosDdibujos/maomao.jpg" alt="">
+                </a>
+                <a href="./Imagenes/dosDdibujos/Dibujosnosotros.png" data-lightbox="galeria" data-title="Amigos">
+                    <img src="./Imagenes/dosDdibujos/Dibujosnosotros.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="imganes3D">
+            <h2 id="titulo3d1">Imagenes 3D</h2>
+            <div>
+                <h3 id="titulo3d2">Modelos personajes 3D</h3>
+                <div class="carrusel-personajes">
+                    <div class="carrusel-contenedor">
+                        <div class="slide">
+                            <img src="./Imagenes/tresDimagenes/arcane-feliz.jpg" alt="Arcane Feliz">
+                        </div>
+                        <div class="slide">
+                            <img src="./Imagenes/tresDimagenes/arcane-triste.jpg" alt="Arcane Triste">
+                        </div>
+                        <div class="slide">
+                            <img src="./Imagenes/tresDimagenes/Leon_julia_muñeca-foto-segunda-opcion.png" alt="Muñeca">
+                        </div>
+                        <div class="slide">
+                            <img src="./Imagenes/tresDimagenes/bebe.png" alt="Bebé">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 id="modeloPersonaje">Modelos paisajes</h3>
+            <div>
+                <a href="./Imagenes/tresDimagenes/Leon_Julia_03-LOWPOLY-acabados.png" data-lightbox="galeria"
+                    data-title="Lowpoly">
+                <img src="./Imagenes/tresDimagenes/Leon_Julia_03-LOWPOLY-acabados.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/castillo-paisaje.png" data-lightbox="galeria" data-title="Castillo">
+                <img src="./Imagenes/tresDimagenes/castillo-paisaje.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/castillo-por-dentro.png" data-lightbox="galeria" data-title="Castillo">
+                <img src="./Imagenes/tresDimagenes/castillo-por-dentro.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/leon_julia_casa-final-1.png" data-lightbox="galeria" data-title="Casa">
+                <img src="./Imagenes/tresDimagenes/leon_julia_casa-final-1.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/mundo.png" data-lightbox="galeria" data-title="Mundo">
+                <img src="./Imagenes/tresDimagenes/mundo.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/mundo2.png" data-lightbox="galeria" data-title="Mundo">
+                <img src="./Imagenes/tresDimagenes/mundo2.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/portal-dragones.png" data-lightbox="galeria" data-title="Portal">
+                <img src="./Imagenes/tresDimagenes/portal-dragones.png" alt=""> </a>
+                <a href="./Imagenes/tresDimagenes/grua.PNG" data-lightbox="galeria" data-title="grua">
+                <img src="./Imagenes/tresDimagenes/grua.PNG" alt=""> </a>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.7.2.js"
+        integrity="sha256-FxfqH96M63WENBok78hchTCDxmChGFlo+/lFIPcZPeI=" crossorigin="anonymous"></script>
+        <script src="lightbox2-2.11.3/src/js/lightbox.js"></script>
+        <h2 id="sobremih2">About</h2>
+        <div class="sobre-mi">
+            <div class="textoInformacion">
+                <h3 id="sobremi1">Información sobre mi</h3>
+                <p id="psobremi">Soy ilustradora y animadora 2D/3D, apasionada por crear imágenes <br>
+                    que cuentan historias y transmiten emociones de manera clara y auténtica.<br>
+                    Para mí, la ilustración es un lenguaje propio: una forma de construir mundos, <br>
+                    personajes y atmósferas que inviten a mirar más allá de la primera impresión. <br>
+                    Mi proceso combina exploración artística y rigor profesional. <br>
+                </p>
+                <p id="appqueuso"><br> Aplicaciones que uso:
+                </p>
+                <div class="logosEstrellitas">
+                    <img src="./Imagenes/icons/blender-icon.png" alt="">
+                    <img src="./Imagenes/icons/ilustrator-icon.png" alt="">
+                    <img src="./Imagenes/icons/photoshop-icon.png" alt="">
+                    <img src="./Imagenes/icons/premier-icon.png" alt="">
+                </div>
+               <div><img class="grafica" src="Imagenes/dosDdibujos/grafica.PNG"></div>
+            </div>
+            <div class="imagenes">
+                <div class="imgReal">
+                    <img src="./Imagenes/dosDdibujos/foto-real.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="contacto">
+            <h2 id="contactoh2">Contacto</h2>
+            <div class="contacto-contenedor">
+                <div class="contacto-izquierda">
+                    <div class="RedesSociales">
+                        <h3>Redes Sociales</h3>
+                        <div class="redesEnlace">
+                            <p>Instagram: yuli_artis</p>
+                            <p>Discord: Yuli_Takami</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna derecha -->
+                <div class="contacto-derecha">
+                    <div class="message-section">
+                        <h3>Message</h3>
+                        <div class="contactoFormal">
+                            <p>Email: julialeongonzalez9@gmail.com</p>
+                            <p>Teléfono: +34 684 201 096</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qr-section">
+                <h4>Código QR</h4>
+                <div class="qr">
+                    <img src="./Imagenes/icons/QR-cuenta-insta.jpg" alt="QR Instagram">
+                    <img src="./Imagenes/icons/QR-grupo-de-discord.jpg" alt="QR Discord">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="formulariobien">
+                <div class="formulario">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="email" name="emal" id="email" placeholder="Email">
+                    <textarea name="mensaje" id="msg" placeholder="mensaje"></textarea>
+                </div>
+            </div>
+            <div>
+                <div class="textoimg">
+                    <p>Email: julialeongonzalez9@gmail.com</p>
+                    <p>© 2025. Portfolio creado por Julia León González.<br>
+                        Todos los derechos reservados.<br>
+                    </p>
+                    <img src="./Imagenes/dosDdibujos/totoro.png" alt="">
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
