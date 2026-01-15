@@ -4,9 +4,17 @@
         <link href="lightbox2-2.11.3/src/css/lightbox.css" rel="stylesheet" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Porfolio-Julia-León-González</title>
+        <title>Portfolio-Julia-León-González</title>
         <style>
-        * {
+            html{
+                scroll-behavior: smooth;
+            }
+            #tituloGaleria,#sobremih2,#contactoh2{
+                scroll-margin-top: 10vh;
+            }
+        
+           
+                   * {
         font-family: 'Times New Roman', Times, serif;
         margin: 0;
         font-size: 20px;
@@ -14,6 +22,27 @@
         body {
         overflow-x: hidden;
         }
+        .gamejam{
+           width: 100%;
+           height: 700px;
+        max-width: 1000px;;
+        border-radius: 8px;
+        margin-left: 440px;
+
+
+        }
+        #letrasgame{
+               font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+            text-align: center;
+        }
+        #letrasvideo{
+             font-size: 55px;
+        text-align: center;
+        margin: 175px 0 20px 0;
+        color: #29375C;
+        }
+     
         .barra-menu {
         position: fixed;
         top: 0;
@@ -38,7 +67,7 @@
         }
         header {
         width: 100%;
-        height: 600px;
+        height: 946px;
         background-size: cover;
         background-repeat: no-repeat;
         background-size: contain;
@@ -77,13 +106,14 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         padding: 30px;
-        max-width: 1400px;
-        margin: 0 auto;
+        max-width: 1200px;
+        margin-left: 289px;
+       
         }
         .img2D a,
         .img2D img {
-        width: 100%;
-        height: 280px;
+        width: 300px;
+        height: 200px;
         object-fit: cover;
         border-radius: 10px;
         transition: transform 0.3s ease;
@@ -95,10 +125,10 @@
         position: relative;
         width: 100vw;
         margin-left: calc(-50vw + 50%);
-        height: 80vh;
+        height: 725px;
         min-height: 500px;
         overflow: hidden;
-        margin-top: 60px;
+        margin-top: 20px;
         }
         .carrusel-contenedor {
         width: 400%;
@@ -218,7 +248,8 @@
         .contacto {
         padding: 40px;
         max-width: 1200px;
-        margin: 0 auto;
+        margin-top: 57px;
+        margin-left: 300px;
         }
         .contacto-contenedor {
         display: grid;
@@ -355,12 +386,13 @@
         text-align: center;
         margin: 30px 0 20px 0;
         color: #29375C;
+        margin-top: 50px;
         }
         h2#titulo3d1,
         #titulo2d1 {
         font-size: 45px;
         text-align: center;
-        margin: 30px 0 20px 0;
+        margin: 20px 0 20px 0;
         color: #29375C;
         }
         h3 {
@@ -370,18 +402,19 @@
         text-align: center;
         }
         #modeloPersonaje {
-        margin-top: 15px;
+        margin-top: 100px;
+
         }
         h2#sobremih2 {
         font-size: 55px;
         text-align: center;
-        margin: 30px 0 20px 0;
+        margin: 175px 0 20px 0;
         color: #29375C;
         }
         h2#contactoh2 {
         font-size: 55px;
         text-align: center;
-        margin: 30px 0 20px 0;
+        margin: 80px 20px 0;
         color: #29375C;
         }
         h3#sobremi1 {
@@ -688,19 +721,19 @@
     </head>
     <body>
         <div class="barra-menu">
-            <a href="#">Inicio</a>
-            <a href="#">Galeria</a>
-            <a href="#">About</a>
-            <a href="#">Contacto</a>
+            <a href="#">Opening</a>
+            <a href="#tituloGaleria">Gallery</a>
+            <a href="#sobremih2">About</a>
+            <a href="#contactoh2">Contact</a>
         </div>
         <Header id="header">
             <h1 class="typing-clean">Portfolio</h1>
             <h1 class="typing-clean">Julia León González</h1>
         </Header>
         <div id="Galeria"> </div>
-        <h1 id="tituloGaleria">Galeria</h1>
+        <h1 id="tituloGaleria">Gallery</h1> 
         <div class="imganes2D">
-            <h2 id="titulo2d1">Imagenes 2D</h2>
+            <h2 id="titulo2d1"> 2D Art</h2>
             <div class="img2D">
                 <a href="./Imagenes/dosDdibujos/julia-Y-lidya.png" data-lightbox="galeria" data-title="juliaYLidya">
                     <img src="./Imagenes/dosDdibujos/julia-Y-lidya.png" alt="">
@@ -742,9 +775,9 @@
             </div>
         </div>
         <div class="imganes3D">
-            <h2 id="titulo3d1">Imagenes 3D</h2>
+            <h2 id="titulo3d1">3D Art</h2>
             <div>
-                <h3 id="titulo3d2">Modelos personajes 3D</h3>
+                <h3 id="titulo3d2">3D character models</h3>
                 <div class="carrusel-personajes">
                     <div class="carrusel-contenedor">
                         <div class="slide">
@@ -762,7 +795,7 @@
                     </div>
                 </div>
             </div>
-            <h3 id="modeloPersonaje">Modelos paisajes</h3>
+            <h3 id="modeloPersonaje">Landscape models</h3>
             <div>
                 <a href="./Imagenes/tresDimagenes/Leon_Julia_03-LOWPOLY-acabados.png" data-lightbox="galeria"
                     data-title="Lowpoly">
@@ -786,17 +819,30 @@
         <script src="https://code.jquery.com/jquery-1.7.2.js"
         integrity="sha256-FxfqH96M63WENBok78hchTCDxmChGFlo+/lFIPcZPeI=" crossorigin="anonymous"></script>
         <script src="lightbox2-2.11.3/src/js/lightbox.js"></script>
+       <div>
+        <h2 id="letrasvideo"> Video game</h2>
+           <div>
+               <img class="gamejam" src="Imagenes/dosDdibujos/wikiwki.png">
+           </div>
+           <div>
+               <p id="letrasgame">
+You're a beginner in the world of evil, you receive missions <br>
+to take over the city and get your villain license
+              
+           </p>
+           </div>
+       </div>
         <h2 id="sobremih2">About</h2>
         <div class="sobre-mi">
             <div class="textoInformacion">
-                <h3 id="sobremi1">Información sobre mi</h3>
-                <p id="psobremi">Soy ilustradora y animadora 2D/3D, apasionada por crear imágenes <br>
-                    que cuentan historias y transmiten emociones de manera clara y auténtica.<br>
-                    Para mí, la ilustración es un lenguaje propio: una forma de construir mundos, <br>
-                    personajes y atmósferas que inviten a mirar más allá de la primera impresión. <br>
-                    Mi proceso combina exploración artística y rigor profesional. <br>
+                <h3 id="sobremi1">About me</h3>
+                <p id="psobremi">I am an illustrator and 2D/3D animator, passionate about creating  <br>
+                  images that tell stories and convey emotions in a clear and authentic way.<br>
+                    For me, illustration is its own language: a way of building worlds, <br>
+                  characters and atmospheres that invite you to look beyond the first impression. <br>
+                    My process combines artistic exploration and professional rigor. <br>
                 </p>
-                <p id="appqueuso"><br> Aplicaciones que uso:
+                <p id="appqueuso"><br> Applications I use:
                 </p>
                 <div class="logosEstrellitas">
                     <img src="./Imagenes/icons/blender-icon.png" alt="">
@@ -813,11 +859,11 @@
             </div>
         </div>
         <div class="contacto">
-            <h2 id="contactoh2">Contacto</h2>
+            <h2 id="contactoh2">Contact</h2>
             <div class="contacto-contenedor">
                 <div class="contacto-izquierda">
                     <div class="RedesSociales">
-                        <h3>Redes Sociales</h3>
+                        <h3>Social media</h3>
                         <div class="redesEnlace">
                             <p>Instagram: yuli_artis</p>
                             <p>Discord: Yuli_Takami</p>
@@ -830,13 +876,13 @@
                         <h3>Message</h3>
                         <div class="contactoFormal">
                             <p>Email: julialeongonzalez9@gmail.com</p>
-                            <p>Teléfono: +34 684 201 096</p>
+                            <p>Tel: +34 684 201 096</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="qr-section">
-                <h4>Código QR</h4>
+                <h4>QR code</h4>
                 <div class="qr">
                     <img src="./Imagenes/icons/QR-cuenta-insta.jpg" alt="QR Instagram">
                     <img src="./Imagenes/icons/QR-grupo-de-discord.jpg" alt="QR Discord">
@@ -846,16 +892,16 @@
         <footer>
             <div class="formulariobien">
                 <div class="formulario">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="nombre" id="nombre" placeholder="Name">
                     <input type="email" name="emal" id="email" placeholder="Email">
-                    <textarea name="mensaje" id="msg" placeholder="mensaje"></textarea>
+                    <textarea name="mensaje" id="msg" placeholder="Message"></textarea>
                 </div>
             </div>
             <div>
                 <div class="textoimg">
                     <p>Email: julialeongonzalez9@gmail.com</p>
-                    <p>© 2025. Portfolio creado por Julia León González.<br>
-                        Todos los derechos reservados.<br>
+                    <p>© 2025. Portfolio created by Julia León González<br>
+                        All rights reserved<br>
                     </p>
                     <img src="./Imagenes/dosDdibujos/totoro.png" alt="">
                 </div>
